@@ -37,3 +37,45 @@ The current Wave 1 is client-only. Wave 2 will preserve these resource boundarie
 - `DELETE /v1/lab-leases/:leaseId`
 
 Every mutating endpoint will carry a request ID and an actor identity. Lab and commerce operations are idempotent by contract.
+
+
+## Study Lab API
+
+### GET /api/study-provider
+
+Returns the configured study generation mode without exposing credentials.
+
+Response fields:
+
+- `provider`: `local` or configured remote provider.
+- `configured`: whether required runtime configuration is present.
+- `model`: remote model identifier when applicable.
+
+### POST /api/study-pack
+
+Request:
+
+```json
+{
+  "title": "Optional title",
+  "sourceText": "At least 40 characters of source material"
+}
+```
+
+Response:
+
+```json
+{
+  "pack": {
+    "id": "...",
+    "title": "...",
+    "summary": ["..."],
+    "flashcards": [{"id":"card-1","front":"...","back":"..."}],
+    "quiz": [{"id":"quiz-1","prompt":"...","options":["..."],"answer":0,"explanation":"..."}],
+    "sourceDigest": "...",
+    "provider": "local"
+  }
+}
+```
+
+The default local provider performs no network request. Remote generation is opt-in through server configuration.
