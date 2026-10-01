@@ -1,8 +1,27 @@
 import { applyArchitectureResult, applyBlitzAnswer, applyExamResult, evaluateArchitecture, initialProgress, readinessLabel, scoreExam } from '/src/domain.mjs';
+import { gradeStudyQuiz, recordFlashcardReview } from '/src/study.mjs';
 import { blitzCards, questions, scenarios, tracks } from '/public/data.mjs';
 
 const root = document.querySelector('#app');
 const STORAGE_KEY = 'academyos-state-v1';
+const STUDY_STORAGE_KEY = 'academyos-study-v1';
+const studySaved = JSON.parse(localStorage.getItem(STUDY_STORAGE_KEY) || 'null');
+const studyState = {
+  library: Array.isArray(studySaved?.library) ? studySaved.library : [],
+  activePackId: studySaved?.activePackId || null,
+  reviews: studySaved?.reviews || {}
+};
+const studyUi = { loading: false, error: '', answers: {}, revealed: {}, lastQuiz: null };
+
+function persistStudy() {
+  localStorage.setItem(STUDY_STORAGE_KEY, JSON.stringify(studyState));
+}
+function activeStudyPack() {
+  return studyState.library.find((pack) => pack.id === studyState.activePackId) || studyState.library[0] || null;
+}
+function escapeHtml(value) {
+  return String(value ?? '').replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
+}
 const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
 const state = {
   route: location.hash.slice(1) || 'dashboard',
@@ -21,7 +40,7 @@ function navigate(route) { state.route = route; location.hash = route; render();
 window.addEventListener('hashchange', () => { state.route = location.hash.slice(1) || 'dashboard'; render(); });
 
 function layout(content) {
-  const nav = [['dashboard','Practice Hub'],['catalog','Certification Catalog'],['exam','Practice Exam'],['blitz','Blitz'],['architecture','Arch Builder']];
+  const nav = [['dashboard','Practice Hub'],['study','Study Lab'],['catalog','Certification Catalog'],['exam','Practice Exam'],['blitz','Blitz'],['architecture','Arch Builder']];
   const navButtons = nav.map(([route,label]) => `<button data-route="${route}" class="${state.route === route ? 'active' : ''}">${label}</button>`).join('');
   root.innerHTML = `<div class="shell"><aside class="sidebar"><div class="brand"><span class="brand-mark">A</span> AcademyOS AI</div><nav class="nav">${navButtons}</nav><div class="side-card"><div class="eyebrow">Active track</div><strong>${activeTrack().provider} ${activeTrack().code}</strong><p class="muted" style="margin:8px 0 0">${activeTrack().title}</p></div></aside><main class="main"><div class="mobile-nav nav">${navButtons}</div>${content}</main></div>`;
   root.querySelectorAll('[data-route]').forEach((button) => button.addEventListener('click', () => navigate(button.dataset.route)));
@@ -92,5 +111,168 @@ function architecture() {
   root.querySelector('#reset-arch').addEventListener('click', () => { state.architecture = { services: [], edges: [], result: null }; architecture(); });
 }
 
-function render() { if (state.route !== 'blitz') clearInterval(blitzInterval); ({ dashboard, catalog, exam, blitz, architecture }[state.route] || dashboard)(); }
+
+function study() {
+  const pack = activeStudyPack();
+  const library = studyState.library.length
+    ? studyState.library.map((item) => `<button class="study-library-item ${item.id === pack?.id ? 'active' : ''}" data-study-pack="${escapeHtml(item.id)}"><span><strong>${escapeHtml(item.title)}</strong><small>${escapeHtml(item.provider || 'local')} · ${item.flashcards?.length || 0} cards</small></span><span>→</span></button>`).join('')
+    : '<p class="muted">No saved study packs yet.</p>';
+
+  const packView = !pack ? `
+    <div class="card study-empty">
+      <div class="eyebrow">Your study pack will appear here</div>
+      <h2>Turn passive notes into active practice.</h2>
+      <p class="muted">Generate a pack to get a summary, flashcards, and a quiz from the same source material.</p>
+    </div>` : (() => {
+      const summary = (pack.summary || []).map((item) => `<li>${escapeHtml(item)}</li>`).join('');
+      const cards = (pack.flashcards || []).map((card, index) => {
+        const revealed = Boolean(studyUi.revealed[card.id]);
+        const receipt = studyState.reviews[card.id];
+        return `<article class="study-card">
+          <div class="study-card-count">Card ${index + 1}</div>
+          <h3>${escapeHtml(card.front)}</h3>
+          <div class="study-card-answer ${revealed ? 'revealed' : ''}">${revealed ? escapeHtml(card.back) : 'Think first, then reveal the answer.'}</div>
+          <div class="actions">
+            <button class="btn" data-reveal-card="${escapeHtml(card.id)}">${revealed ? 'Hide answer' : 'Reveal answer'}</button>
+            ${revealed ? `<button class="btn" data-rate-card="${escapeHtml(card.id)}" data-rating="hard">Hard</button><button class="btn" data-rate-card="${escapeHtml(card.id)}" data-rating="good">Good</button><button class="btn" data-rate-card="${escapeHtml(card.id)}" data-rating="easy">Easy</button>` : ''}
+          </div>
+          ${receipt ? `<small class="muted">Last: ${escapeHtml(receipt.rating)} · due ${escapeHtml(new Date(receipt.dueAt).toLocaleDateString())}</small>` : ''}
+        </article>`;
+      }).join('');
+
+      const quizResult = studyUi.lastQuiz;
+      const quiz = (pack.quiz || []).map((question, index) => {
+        const selected = studyUi.answers[question.id];
+        const resultItem = quizResult?.items?.find((item) => item.id === question.id);
+        return `<article class="study-question">
+          <div class="eyebrow">Question ${index + 1}</div>
+          <h3>${escapeHtml(question.prompt)}</h3>
+          <div class="options">
+            ${question.options.map((option, optionIndex) => `<button class="option ${selected === optionIndex ? 'selected' : ''}" data-study-answer="${escapeHtml(question.id)}" data-option="${optionIndex}"><span class="option-key">${String.fromCharCode(65 + optionIndex)}</span><span>${escapeHtml(option)}</span></button>`).join('')}
+          </div>
+          ${resultItem ? `<div class="notice ${resultItem.isCorrect ? 'success' : 'error'}"><strong>${resultItem.isCorrect ? 'Correct' : 'Review this one'}</strong><br>${escapeHtml(question.explanation)}</div>` : ''}
+        </article>`;
+      }).join('');
+
+      return `
+        <section class="card study-pack-head">
+          <div>
+            <div class="eyebrow">Generated study pack</div>
+            <h2>${escapeHtml(pack.title)}</h2>
+            <p class="muted">Provider: <strong>${escapeHtml(pack.provider || 'local')}</strong>${pack.model ? ` · ${escapeHtml(pack.model)}` : ''} · source ${escapeHtml(pack.sourceDigest || 'n/a')}</p>
+          </div>
+          <span class="pill">${pack.flashcards?.length || 0} cards · ${pack.quiz?.length || 0} questions</span>
+        </section>
+        <section class="card">
+          <div class="eyebrow">Fast review</div>
+          <h2>Summary</h2>
+          <ul class="study-summary">${summary}</ul>
+        </section>
+        <section>
+          <div class="section-heading"><div><div class="eyebrow">Active recall</div><h2>Flashcards</h2></div></div>
+          <div class="study-card-grid">${cards}</div>
+        </section>
+        <section class="card">
+          <div class="section-heading"><div><div class="eyebrow">Retrieval check</div><h2>Quiz</h2></div>${quizResult ? `<span class="pill">${quizResult.percent}% · ${quizResult.correct}/${quizResult.total}</span>` : ''}</div>
+          <div class="study-quiz">${quiz}</div>
+          <div class="actions"><button class="btn primary" id="grade-study-quiz">Grade quiz</button><button class="btn" id="reset-study-quiz">Reset answers</button></div>
+        </section>`;
+    })();
+
+  layout(`
+    <div class="topbar">
+      <div><div class="eyebrow">Study Lab</div><h1>Make your notes fight back.</h1><p class="muted">One source becomes a summary, flashcards, and retrieval practice.</p></div>
+    </div>
+    <section class="study-layout">
+      <div class="card">
+        <div class="eyebrow">Create a study pack</div>
+        <h2>Paste what you actually need to learn.</h2>
+        <form id="study-form" class="study-form">
+          <label>Title<input id="study-title" maxlength="120" placeholder="e.g. Cell biology — Unit 3"></label>
+          <label>Notes or source material<textarea id="study-source" minlength="40" maxlength="20000" rows="11" placeholder="Paste lecture notes, a chapter excerpt, or your own study notes…"></textarea></label>
+          <button class="btn primary" type="submit" ${studyUi.loading ? 'disabled' : ''}>${studyUi.loading ? 'Generating…' : 'Generate study pack'}</button>
+          <p class="muted study-privacy">Private-by-default: local deterministic generation is the default. A server deployment must explicitly enable a remote AI provider.</p>
+          ${studyUi.error ? `<div class="notice error">${escapeHtml(studyUi.error)}</div>` : ''}
+        </form>
+      </div>
+      <aside class="card study-library">
+        <div class="eyebrow">Study library</div>
+        <h2>Recent packs</h2>
+        ${library}
+      </aside>
+    </section>
+    <div class="study-output">${packView}</div>
+  `);
+
+  root.querySelector('#study-form').addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const title = root.querySelector('#study-title').value;
+    const sourceText = root.querySelector('#study-source').value;
+    studyUi.loading = true;
+    studyUi.error = '';
+    study();
+    try {
+      const response = await fetch('/api/study-pack', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ title, sourceText })
+      });
+      const payload = await response.json();
+      if (!response.ok) throw new Error(payload.error || 'Study-pack generation failed.');
+      const nextPack = payload.pack;
+      studyState.library = [nextPack, ...studyState.library.filter((item) => item.id !== nextPack.id)].slice(0, 10);
+      studyState.activePackId = nextPack.id;
+      studyUi.answers = {};
+      studyUi.revealed = {};
+      studyUi.lastQuiz = null;
+      persistStudy();
+    } catch (error) {
+      studyUi.error = error instanceof Error ? error.message : 'Study-pack generation failed.';
+    } finally {
+      studyUi.loading = false;
+      study();
+    }
+  });
+
+  root.querySelectorAll('[data-study-pack]').forEach((button) => button.addEventListener('click', () => {
+    studyState.activePackId = button.dataset.studyPack;
+    studyUi.answers = {};
+    studyUi.revealed = {};
+    studyUi.lastQuiz = null;
+    persistStudy();
+    study();
+  }));
+
+  root.querySelectorAll('[data-reveal-card]').forEach((button) => button.addEventListener('click', () => {
+    const id = button.dataset.revealCard;
+    studyUi.revealed[id] = !studyUi.revealed[id];
+    study();
+  }));
+
+  root.querySelectorAll('[data-rate-card]').forEach((button) => button.addEventListener('click', () => {
+    const id = button.dataset.rateCard;
+    studyState.reviews = recordFlashcardReview(studyState.reviews, id, button.dataset.rating);
+    persistStudy();
+    study();
+  }));
+
+  root.querySelectorAll('[data-study-answer]').forEach((button) => button.addEventListener('click', () => {
+    studyUi.answers[button.dataset.studyAnswer] = Number(button.dataset.option);
+    studyUi.lastQuiz = null;
+    study();
+  }));
+
+  root.querySelector('#grade-study-quiz')?.addEventListener('click', () => {
+    studyUi.lastQuiz = gradeStudyQuiz(pack, studyUi.answers);
+    study();
+  });
+
+  root.querySelector('#reset-study-quiz')?.addEventListener('click', () => {
+    studyUi.answers = {};
+    studyUi.lastQuiz = null;
+    study();
+  });
+}
+
+function render() { if (state.route !== 'blitz') clearInterval(blitzInterval); ({ dashboard, study, catalog, exam, blitz, architecture }[state.route] || dashboard)(); }
 render();
