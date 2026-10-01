@@ -15,6 +15,20 @@ Status: implemented in this repository.
 - Zero-dependency Node server
 - Node test suite and CI
 
+## Wave 1.5 — general AI Study Lab
+
+Status: Phase A implemented; later phases remain planned.
+
+- Paste notes and generate a source-grounded study pack
+- Summary, flashcards and multiple-choice quiz from one source
+- Hard/Good/Easy flashcard review receipts
+- Local study library and progress persistence
+- Deterministic local generation by default
+- Explicit opt-in OpenAI provider adapter
+- Next: file upload, source citations, grounded tutor, spaced repetition queue
+
+See `docs/REVERSE_ENGINEERING_AI_STUDY_APP.md`.
+
 ## Wave 2 — server-backed product foundation
 
 - Account model and authentication
