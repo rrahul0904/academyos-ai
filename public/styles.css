@@ -117,7 +117,7 @@ select { width:100%; background:#111827; color:var(--text); border:1px solid var
 .study-form textarea {
   width: 100%;
   box-sizing: border-box;
-  border: 1px solid var(--line);
+  border: 1px solid var(--border);
   border-radius: 14px;
   background: var(--panel-2);
   color: var(--text);
@@ -144,7 +144,7 @@ select { width:100%; background:#111827; color:var(--text); border:1px solid var
   align-items: center;
   gap: 16px;
   text-align: left;
-  border: 1px solid var(--line);
+  border: 1px solid var(--border);
   border-radius: 14px;
   padding: 12px 13px;
   margin-top: 10px;
@@ -154,7 +154,7 @@ select { width:100%; background:#111827; color:var(--text); border:1px solid var
 }
 .study-library-item.active {
   border-color: var(--accent);
-  background: var(--accent-soft);
+  background: rgba(140,240,199,.08);
 }
 .study-library-item span:first-child {
   display: grid;
@@ -197,7 +197,7 @@ select { width:100%; background:#111827; color:var(--text); border:1px solid var
   gap: 16px;
 }
 .study-card {
-  border: 1px solid var(--line);
+  border: 1px solid var(--border);
   border-radius: 18px;
   padding: 18px;
   background: var(--panel);
@@ -238,7 +238,7 @@ select { width:100%; background:#111827; color:var(--text); border:1px solid var
   margin: 16px 0 20px;
 }
 .study-question {
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--border);
   padding-top: 18px;
 }
 .study-question:first-child {
