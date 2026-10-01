@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node server.mjs",
     "test": "node --test tests/*.test.mjs",
-    "check": "npm test"
+    "check": "node --check public/app.mjs && node --check server.mjs && node --check src/study.mjs && node --check src/study-ai.mjs && npm test"
   },
   "engines": {
     "node": ">=20"
