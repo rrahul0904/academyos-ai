@@ -22,6 +22,8 @@ The AI-agent track is built around a first-principles learning contract:
 
 Learners build the underlying agent loop before framework abstractions unlock. Completion requires evidence such as failure observations, deterministic checks and shipped artifact receipts rather than tutorial completion alone.
 
+The current Phase-A learner workspace is available at `/public/agent-learning.html` when the local server is running. It includes the lesson map, prerequisite gates, evidence timeline and framework gate. It records evidence but does not yet execute provider APIs or untrusted learner code.
+
 See `docs/AI_AGENT_LEARNING_LOOP.md` for the route and product requirements.
 
 ## Run locally
@@ -30,7 +32,7 @@ See `docs/AI_AGENT_LEARNING_LOOP.md` for the route and product requirements.
 npm start
 ```
 
-Then open http://localhost:4173.
+Then open http://localhost:4173. The main page includes an **AI Agent Engineering** entry point.
 
 Run verification with:
 
