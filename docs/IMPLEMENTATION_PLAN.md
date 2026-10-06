@@ -17,31 +17,35 @@ Status: implemented in this repository.
 
 ## Wave 1B — AI Agent Engineering from first principles
 
-Status: implementation started on the RE-330 learning-system track.
+Status: Phase-A implementation in progress on the RE-330 learning-system track.
 
 The canonical lesson loop is:
 
 `Concept -> Build -> Break -> Diagnose -> Verify -> Ship`
 
-Current implementation slice:
+Implemented in the current branch:
 
 - agent-learning state and evidence-receipt domain model
 - prerequisite-aware lesson progression
 - framework gate that stays locked until core primitives are verified
 - deliberate failure-injection requirement
 - portfolio artifact receipts
-- initial route covering direct model calls, structured output, hand-written tool loops, guardrails, state/memory, evals, RAG, MCP, framework comparison and multi-agent systems
+- initial 10-lesson route covering direct model calls, structured output, hand-written tool loops, guardrails, state/memory, evals, RAG, MCP, framework comparison and multi-agent systems
+- learner-facing lesson workspace
+- lesson prerequisite locks and six-stage progression
+- failure selection, typed execution evidence and artifact receipts
+- local learner-state persistence and evidence timeline
+- discoverable entry point from the main AcademyOS page
 - deterministic tests for stage order, prerequisites, failure evidence and framework gating
 
 Next implementation slice:
 
-- expose AI Agent Engineering in the learner UI
-- lesson map with locked/unlocked dependencies
-- six-stage lesson runner
-- failure-injection and diagnosis workspace
-- evidence/artifact timeline
-- local learner-state persistence for this track
-- browser/mobile verification
+- isolated learner-code execution sandbox
+- receipts generated from real executions rather than typed evidence
+- deterministic lab validators and replay
+- source-grounded diagnosis/remediation
+- browser/mobile/accessibility acceptance tests
+- provider adapters with explicit secret, network and cost controls
 
 Framework-specific lessons must not unlock merely because a learner completed videos or quizzes. The learner must first verify the underlying agent-loop capabilities with execution evidence.
 
