@@ -72,16 +72,28 @@ The goal is not to discourage frameworks. It is to make them legible: once the l
 - Do not award mastery for framework trivia that has not been connected to an underlying primitive.
 - Portfolio artifacts should be replayable and inspectable, not screenshots of a successful run.
 
-## Phase A implementation boundary
+## Phase A implemented in this branch
 
-This branch introduces the domain engine and curriculum data. The next UI slice should expose:
+The current learner workspace provides:
 
-- an AI Agent Engineering track card;
-- a lesson map with locked/unlocked prerequisites;
+- a discoverable AI Agent Engineering entry point from the main AcademyOS page;
+- a 10-lesson prerequisite map;
 - the six-stage lesson runner;
-- a failure-injection panel;
-- evidence receipts and artifact history;
-- the framework gate and the explanation for why it is locked;
-- a learner-facing "what changed after this failure?" diagnosis view.
+- deliberate failure selection during the Break stage;
+- command/exit-code evidence fields for Build, Verify and Ship;
+- immutable artifact receipt input for Ship;
+- local learner-state persistence;
+- per-lesson evidence timelines;
+- capability tracking and an explicit framework gate;
+- responsive single-column fallback for narrow screens.
 
-Hosted execution, provider API calls and sandboxed code execution remain separate release gates and must not be claimed until independently verified.
+This is intentionally an evidence-recording workspace, not a fake execution sandbox. Hosted provider calls, untrusted code execution, automatic artifact hashing, source-grounded diagnosis and browser/runtime certification remain separate release gates and must not be claimed until independently verified.
+
+## Next engineering boundary
+
+1. Add a real isolated execution sandbox for learner code.
+2. Generate receipts from actual executions rather than typed evidence.
+3. Add deterministic validators for each lab.
+4. Add source-grounded remediation from observed failures.
+5. Add browser/mobile acceptance tests and accessibility checks.
+6. Add provider adapters only behind explicit cost, secret and network controls.
