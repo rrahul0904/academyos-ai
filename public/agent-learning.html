@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Agent Engineering · AcademyOS AI</title>
+  <link rel="stylesheet" href="/public/styles.css" />
+  <style>
+    body { margin: 0; background: #0c1017; color: #eef2f8; }
+    .agent-shell { max-width: 1280px; margin: 0 auto; padding: 28px; }
+    .agent-header { display:flex; justify-content:space-between; gap:20px; align-items:flex-start; margin-bottom:24px; }
+    .agent-header h1 { margin:8px 0; font-size:clamp(32px,5vw,58px); max-width:900px; }
+    .agent-grid { display:grid; grid-template-columns:minmax(300px,.85fr) minmax(0,1.65fr); gap:18px; }
+    .agent-panel { background:#151b24; border:1px solid #283342; border-radius:18px; padding:18px; }
+    .lesson-list { display:grid; gap:10px; }
+    .lesson-button { width:100%; text-align:left; border:1px solid #303c4d; background:#111720; color:inherit; border-radius:14px; padding:14px; cursor:pointer; }
+    .lesson-button.active { border-color:#9fb5ff; background:#1b2540; }
+    .lesson-button.locked { opacity:.46; cursor:not-allowed; }
+    .lesson-meta { display:flex; gap:8px; flex-wrap:wrap; margin-top:7px; font-size:12px; color:#9eabba; }
+    .stage-strip { display:grid; grid-template-columns:repeat(6,1fr); gap:8px; margin:16px 0 20px; }
+    .stage { border:1px solid #334052; border-radius:12px; padding:10px 8px; text-align:center; font-size:12px; color:#9eabba; }
+    .stage.done { background:#1c3329; color:#dff8e8; border-color:#315a45; }
+    .stage.current { background:#273353; color:#fff; border-color:#6d83cf; }
+    .proof-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+    .field { display:grid; gap:6px; }
+    .field label { font-size:12px; color:#aab4c1; }
+    .field input, .field select, .field textarea { width:100%; box-sizing:border-box; border:1px solid #364357; background:#0f141c; color:#eef2f8; border-radius:10px; padding:10px; }
+    .field textarea { min-height:92px; resize:vertical; }
+    .receipt { border-top:1px solid #2a3443; padding:10px 0; font-size:13px; }
+    .receipt:first-child { border-top:0; }
+    .lock-banner { padding:12px 14px; border-radius:12px; background:#261f14; border:1px solid #5b4826; color:#f3ddb3; margin:12px 0; }
+    .unlock-banner { padding:12px 14px; border-radius:12px; background:#153024; border:1px solid #315a45; color:#dff8e8; margin:12px 0; }
+    .pill-row { display:flex; gap:8px; flex-wrap:wrap; margin:10px 0 0; }
+    .stage-action { margin-top:16px; display:flex; gap:10px; flex-wrap:wrap; }
+    .small { font-size:12px; color:#9eabba; }
+    .empty { color:#8e9aaa; font-size:14px; }
+    @media (max-width: 850px) { .agent-grid { grid-template-columns:1fr; } .agent-header { flex-direction:column; } .stage-strip { grid-template-columns:repeat(3,1fr); } .proof-grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <div id="agent-app"></div>
+  <script type="module" src="/public/agent-learning-app.mjs"></script>
+</body>
+</html>
