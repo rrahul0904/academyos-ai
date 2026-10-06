@@ -15,6 +15,36 @@ Status: implemented in this repository.
 - Zero-dependency Node server
 - Node test suite and CI
 
+## Wave 1B — AI Agent Engineering from first principles
+
+Status: implementation started on the RE-330 learning-system track.
+
+The canonical lesson loop is:
+
+`Concept -> Build -> Break -> Diagnose -> Verify -> Ship`
+
+Current implementation slice:
+
+- agent-learning state and evidence-receipt domain model
+- prerequisite-aware lesson progression
+- framework gate that stays locked until core primitives are verified
+- deliberate failure-injection requirement
+- portfolio artifact receipts
+- initial route covering direct model calls, structured output, hand-written tool loops, guardrails, state/memory, evals, RAG, MCP, framework comparison and multi-agent systems
+- deterministic tests for stage order, prerequisites, failure evidence and framework gating
+
+Next implementation slice:
+
+- expose AI Agent Engineering in the learner UI
+- lesson map with locked/unlocked dependencies
+- six-stage lesson runner
+- failure-injection and diagnosis workspace
+- evidence/artifact timeline
+- local learner-state persistence for this track
+- browser/mobile verification
+
+Framework-specific lessons must not unlock merely because a learner completed videos or quizzes. The learner must first verify the underlying agent-loop capabilities with execution evidence.
+
 ## Wave 2 — server-backed product foundation
 
 - Account model and authentication
