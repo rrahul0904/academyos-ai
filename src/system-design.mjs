@@ -179,7 +179,7 @@ export function evaluateSystemDesignAttempt(scenario, attempt) {
 
   return {
     percent,
-    passed: percent >= passingScore && missingCapabilities.length === 0,
+    passed: percent >= passingScore && missingCapabilities.length === 0 && missingFlows.length === 0,
     dimensions: {
       capabilities: capabilityPercent,
       flows: flowPercent,
