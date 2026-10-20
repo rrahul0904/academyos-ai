@@ -1,0 +1,637 @@
+{
+  "capture": "2026-10-20",
+  "post": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xakx8p/a_free_deep_learning_textbook_68_python_notebooks/",
+  "upstream": "udlbook/udlbook",
+  "revision": "da1334fb8e92700e1f2ff3216387da2e68af9d25",
+  "root_license": "CC BY-NC-ND 4.0",
+  "notebooks_license": "MIT",
+  "book_chapters": 21,
+  "notebook_files": 69,
+  "numbered_exercises": 68,
+  "no_notebooks_for_chapter": 14,
+  "extra_variant": "20.2 GPU",
+  "verified": "git tree metadata only; notebook code not executed",
+  "notebooks": [
+    {
+      "chapter": 1,
+      "exercise": "1.1",
+      "name": "1_1_BackgroundMathematics.ipynb",
+      "path": "Notebooks/Chap01/1_1_BackgroundMathematics.ipynb",
+      "sha": "2c8d67b2b499c388fcf478b49f752074e95173cf",
+      "size": 15130,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap01/1_1_BackgroundMathematics.ipynb"
+    },
+    {
+      "chapter": 2,
+      "exercise": "2.1",
+      "name": "2_1_Supervised_Learning.ipynb",
+      "path": "Notebooks/Chap02/2_1_Supervised_Learning.ipynb",
+      "sha": "121dac1176ebe530e51dfc1b28d04d03c8834e1d",
+      "size": 7642,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap02/2_1_Supervised_Learning.ipynb"
+    },
+    {
+      "chapter": 3,
+      "exercise": "3.1",
+      "name": "3_1_Shallow_Networks_I.ipynb",
+      "path": "Notebooks/Chap03/3_1_Shallow_Networks_I.ipynb",
+      "sha": "06ca153bf91ba53e57d66c785abc4ae78d53677f",
+      "size": 43950,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap03/3_1_Shallow_Networks_I.ipynb"
+    },
+    {
+      "chapter": 3,
+      "exercise": "3.2",
+      "name": "3_2_Shallow_Networks_II.ipynb",
+      "path": "Notebooks/Chap03/3_2_Shallow_Networks_II.ipynb",
+      "sha": "a1131d673cbb9f0caa4f600077d0c320867abe4a",
+      "size": 12813,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap03/3_2_Shallow_Networks_II.ipynb"
+    },
+    {
+      "chapter": 3,
+      "exercise": "3.3",
+      "name": "3_3_Shallow_Network_Regions.ipynb",
+      "path": "Notebooks/Chap03/3_3_Shallow_Network_Regions.ipynb",
+      "sha": "e74eb2162c526dc020b523cff5db4173fa368c32",
+      "size": 8863,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap03/3_3_Shallow_Network_Regions.ipynb"
+    },
+    {
+      "chapter": 3,
+      "exercise": "3.4",
+      "name": "3_4_Activation_Functions.ipynb",
+      "path": "Notebooks/Chap03/3_4_Activation_Functions.ipynb",
+      "sha": "c1229872c82d307ebd6d52435fff0653f145d56d",
+      "size": 15376,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap03/3_4_Activation_Functions.ipynb"
+    },
+    {
+      "chapter": 4,
+      "exercise": "4.1",
+      "name": "4_1_Composing_Networks.ipynb",
+      "path": "Notebooks/Chap04/4_1_Composing_Networks.ipynb",
+      "sha": "732d2d0d1b866f78d21d867a49933e4942ec5866",
+      "size": 13880,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap04/4_1_Composing_Networks.ipynb"
+    },
+    {
+      "chapter": 4,
+      "exercise": "4.2",
+      "name": "4_2_Clipping_functions.ipynb",
+      "path": "Notebooks/Chap04/4_2_Clipping_functions.ipynb",
+      "sha": "e2712440264b462a77a4e4e997fa2888cba6bb58",
+      "size": 8698,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap04/4_2_Clipping_functions.ipynb"
+    },
+    {
+      "chapter": 4,
+      "exercise": "4.3",
+      "name": "4_3_Deep_Networks.ipynb",
+      "path": "Notebooks/Chap04/4_3_Deep_Networks.ipynb",
+      "sha": "fe56d2fb289bc381f08bd80b7dd7b7138ef022bb",
+      "size": 11907,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap04/4_3_Deep_Networks.ipynb"
+    },
+    {
+      "chapter": 5,
+      "exercise": "5.1",
+      "name": "5_1_Least_Squares_Loss.ipynb",
+      "path": "Notebooks/Chap05/5_1_Least_Squares_Loss.ipynb",
+      "sha": "37cf704bb0592da97b7998cbead0982658c02819",
+      "size": 24346,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap05/5_1_Least_Squares_Loss.ipynb"
+    },
+    {
+      "chapter": 5,
+      "exercise": "5.2",
+      "name": "5_2_Binary_Cross_Entropy_Loss.ipynb",
+      "path": "Notebooks/Chap05/5_2_Binary_Cross_Entropy_Loss.ipynb",
+      "sha": "8548602aab1d9cd3dde5c2e4baed7f6d1b417d20",
+      "size": 17317,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap05/5_2_Binary_Cross_Entropy_Loss.ipynb"
+    },
+    {
+      "chapter": 5,
+      "exercise": "5.3",
+      "name": "5_3_Multiclass_Cross_entropy_Loss.ipynb",
+      "path": "Notebooks/Chap05/5_3_Multiclass_Cross_entropy_Loss.ipynb",
+      "sha": "7785f6cf3f6f6663249d19d38e56234e921ac91f",
+      "size": 19327,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap05/5_3_Multiclass_Cross_entropy_Loss.ipynb"
+    },
+    {
+      "chapter": 6,
+      "exercise": "6.1",
+      "name": "6_1_Line_Search.ipynb",
+      "path": "Notebooks/Chap06/6_1_Line_Search.ipynb",
+      "sha": "ae8aab11384a18c953f41927a1459f770c8a08d8",
+      "size": 6556,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap06/6_1_Line_Search.ipynb"
+    },
+    {
+      "chapter": 6,
+      "exercise": "6.2",
+      "name": "6_2_Gradient_Descent.ipynb",
+      "path": "Notebooks/Chap06/6_2_Gradient_Descent.ipynb",
+      "sha": "08731db700a8a5b256b16489d408b4af5c7466b7",
+      "size": 18362,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap06/6_2_Gradient_Descent.ipynb"
+    },
+    {
+      "chapter": 6,
+      "exercise": "6.3",
+      "name": "6_3_Stochastic_Gradient_Descent.ipynb",
+      "path": "Notebooks/Chap06/6_3_Stochastic_Gradient_Descent.ipynb",
+      "sha": "34d6ed52047b57e24df003f254b22ffa82154390",
+      "size": 25105,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap06/6_3_Stochastic_Gradient_Descent.ipynb"
+    },
+    {
+      "chapter": 6,
+      "exercise": "6.4",
+      "name": "6_4_Momentum.ipynb",
+      "path": "Notebooks/Chap06/6_4_Momentum.ipynb",
+      "sha": "014ec14f42d8c62c695f18bd4f6f198ba6ffb633",
+      "size": 17274,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap06/6_4_Momentum.ipynb"
+    },
+    {
+      "chapter": 6,
+      "exercise": "6.5",
+      "name": "6_5_Adam.ipynb",
+      "path": "Notebooks/Chap06/6_5_Adam.ipynb",
+      "sha": "476bbaff2868bb1bacef35e8aa3e2eb2f25830aa",
+      "size": 13825,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap06/6_5_Adam.ipynb"
+    },
+    {
+      "chapter": 7,
+      "exercise": "7.1",
+      "name": "7_1_Backpropagation_in_Toy_Model.ipynb",
+      "path": "Notebooks/Chap07/7_1_Backpropagation_in_Toy_Model.ipynb",
+      "sha": "e5811bc14bff704f6365595d514c5b831f187ee8",
+      "size": 21124,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap07/7_1_Backpropagation_in_Toy_Model.ipynb"
+    },
+    {
+      "chapter": 7,
+      "exercise": "7.2",
+      "name": "7_2_Backpropagation.ipynb",
+      "path": "Notebooks/Chap07/7_2_Backpropagation.ipynb",
+      "sha": "272e2691548ab6d8309c44521d15a6bbca7600d0",
+      "size": 13743,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap07/7_2_Backpropagation.ipynb"
+    },
+    {
+      "chapter": 7,
+      "exercise": "7.3",
+      "name": "7_3_Initialization.ipynb",
+      "path": "Notebooks/Chap07/7_3_Initialization.ipynb",
+      "sha": "e813c05bb0e9bc3eeb40b4935f938463fd71e7f9",
+      "size": 12477,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap07/7_3_Initialization.ipynb"
+    },
+    {
+      "chapter": 8,
+      "exercise": "8.1",
+      "name": "8_1_MNIST_1D_Performance.ipynb",
+      "path": "Notebooks/Chap08/8_1_MNIST_1D_Performance.ipynb",
+      "sha": "9f06f6842b3f81b6f7079668236cac9edfc58b19",
+      "size": 9051,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap08/8_1_MNIST_1D_Performance.ipynb"
+    },
+    {
+      "chapter": 8,
+      "exercise": "8.2",
+      "name": "8_2_Bias_Variance_Trade_Off.ipynb",
+      "path": "Notebooks/Chap08/8_2_Bias_Variance_Trade_Off.ipynb",
+      "sha": "1b5ef2a3d7d216220a4372b76271fb06fdadd6a2",
+      "size": 11961,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap08/8_2_Bias_Variance_Trade_Off.ipynb"
+    },
+    {
+      "chapter": 8,
+      "exercise": "8.3",
+      "name": "8_3_Double_Descent.ipynb",
+      "path": "Notebooks/Chap08/8_3_Double_Descent.ipynb",
+      "sha": "b588f8aa7c11c363d5679da97f8f32e4f30e05d4",
+      "size": 12035,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap08/8_3_Double_Descent.ipynb"
+    },
+    {
+      "chapter": 8,
+      "exercise": "8.4",
+      "name": "8_4_High_Dimensional_Spaces.ipynb",
+      "path": "Notebooks/Chap08/8_4_High_Dimensional_Spaces.ipynb",
+      "sha": "c03622b2e6677fd1f1ae51ac1bf6e8cf8c6ba446",
+      "size": 8146,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap08/8_4_High_Dimensional_Spaces.ipynb"
+    },
+    {
+      "chapter": 9,
+      "exercise": "9.1",
+      "name": "9_1_L2_Regularization.ipynb",
+      "path": "Notebooks/Chap09/9_1_L2_Regularization.ipynb",
+      "sha": "9c6e09073c599a06c8f03338a72ebf1d257ca229",
+      "size": 23152,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap09/9_1_L2_Regularization.ipynb"
+    },
+    {
+      "chapter": 9,
+      "exercise": "9.2",
+      "name": "9_2_Implicit_Regularization.ipynb",
+      "path": "Notebooks/Chap09/9_2_Implicit_Regularization.ipynb",
+      "sha": "4f1e11cc990ecb9bbd8bf598497a467cd1332a9d",
+      "size": 15696,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap09/9_2_Implicit_Regularization.ipynb"
+    },
+    {
+      "chapter": 9,
+      "exercise": "9.3",
+      "name": "9_3_Ensembling.ipynb",
+      "path": "Notebooks/Chap09/9_3_Ensembling.ipynb",
+      "sha": "272e7fe87121b10a5a306b91b49ab477cbb72b77",
+      "size": 11828,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap09/9_3_Ensembling.ipynb"
+    },
+    {
+      "chapter": 9,
+      "exercise": "9.4",
+      "name": "9_4_Bayesian_Approach.ipynb",
+      "path": "Notebooks/Chap09/9_4_Bayesian_Approach.ipynb",
+      "sha": "99270b9f814109f7f2a3b60a3c6f6dbe45040627",
+      "size": 18136,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap09/9_4_Bayesian_Approach.ipynb"
+    },
+    {
+      "chapter": 9,
+      "exercise": "9.5",
+      "name": "9_5_Augmentation.ipynb",
+      "path": "Notebooks/Chap09/9_5_Augmentation.ipynb",
+      "sha": "4cfea5f2cad40da991c7237f3acb98df8a3f8258",
+      "size": 13052,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap09/9_5_Augmentation.ipynb"
+    },
+    {
+      "chapter": 10,
+      "exercise": "10.1",
+      "name": "10_1_1D_Convolution.ipynb",
+      "path": "Notebooks/Chap10/10_1_1D_Convolution.ipynb",
+      "sha": "df99035d38c5e775ba6196b3d2347158c2f5298a",
+      "size": 11922,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap10/10_1_1D_Convolution.ipynb"
+    },
+    {
+      "chapter": 10,
+      "exercise": "10.2",
+      "name": "10_2_Convolution_for_MNIST_1D.ipynb",
+      "path": "Notebooks/Chap10/10_2_Convolution_for_MNIST_1D.ipynb",
+      "sha": "60fbad3de11d3adda6cb2db3a8049f026c67a4e4",
+      "size": 9961,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap10/10_2_Convolution_for_MNIST_1D.ipynb"
+    },
+    {
+      "chapter": 10,
+      "exercise": "10.3",
+      "name": "10_3_2D_Convolution.ipynb",
+      "path": "Notebooks/Chap10/10_3_2D_Convolution.ipynb",
+      "sha": "9e115c07facd9ed4d117b67e37fc0baba1c46876",
+      "size": 17225,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap10/10_3_2D_Convolution.ipynb"
+    },
+    {
+      "chapter": 10,
+      "exercise": "10.4",
+      "name": "10_4_Downsampling_and_Upsampling.ipynb",
+      "path": "Notebooks/Chap10/10_4_Downsampling_and_Upsampling.ipynb",
+      "sha": "817097294deee5ae048c1639c851d24073c9e3f4",
+      "size": 14560,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap10/10_4_Downsampling_and_Upsampling.ipynb"
+    },
+    {
+      "chapter": 10,
+      "exercise": "10.5",
+      "name": "10_5_Convolution_For_MNIST.ipynb",
+      "path": "Notebooks/Chap10/10_5_Convolution_For_MNIST.ipynb",
+      "sha": "64f46cf732820a0415819051113620b303e3c974",
+      "size": 11529,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap10/10_5_Convolution_For_MNIST.ipynb"
+    },
+    {
+      "chapter": 11,
+      "exercise": "11.1",
+      "name": "11_1_Shattered_Gradients.ipynb",
+      "path": "Notebooks/Chap11/11_1_Shattered_Gradients.ipynb",
+      "sha": "90d6d6154b98ff06f579a86cfab1970115a6d255",
+      "size": 13284,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap11/11_1_Shattered_Gradients.ipynb"
+    },
+    {
+      "chapter": 11,
+      "exercise": "11.2",
+      "name": "11_2_Residual_Networks.ipynb",
+      "path": "Notebooks/Chap11/11_2_Residual_Networks.ipynb",
+      "sha": "8327cad712352801cec903070ddaf74ee5e8ec09",
+      "size": 10649,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap11/11_2_Residual_Networks.ipynb"
+    },
+    {
+      "chapter": 11,
+      "exercise": "11.3",
+      "name": "11_3_Batch_Normalization.ipynb",
+      "path": "Notebooks/Chap11/11_3_Batch_Normalization.ipynb",
+      "sha": "fbe1c22d58adee57811906576bc2269fa9a5f87c",
+      "size": 12178,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap11/11_3_Batch_Normalization.ipynb"
+    },
+    {
+      "chapter": 12,
+      "exercise": "12.1",
+      "name": "12_1_Self_Attention.ipynb",
+      "path": "Notebooks/Chap12/12_1_Self_Attention.ipynb",
+      "sha": "0938c710828d7ade5c3424e26dd251aaf8d3d5f3",
+      "size": 12038,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap12/12_1_Self_Attention.ipynb"
+    },
+    {
+      "chapter": 12,
+      "exercise": "12.2",
+      "name": "12_2_Multihead_Self_Attention.ipynb",
+      "path": "Notebooks/Chap12/12_2_Multihead_Self_Attention.ipynb",
+      "sha": "1b8df06c9b5c384149ac009286defa2793fe1d1f",
+      "size": 7017,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap12/12_2_Multihead_Self_Attention.ipynb"
+    },
+    {
+      "chapter": 12,
+      "exercise": "12.3",
+      "name": "12_3_Tokenization.ipynb",
+      "path": "Notebooks/Chap12/12_3_Tokenization.ipynb",
+      "sha": "4ab060b2c51d568daeeee45c0115fa4f5e64b1b7",
+      "size": 10255,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap12/12_3_Tokenization.ipynb"
+    },
+    {
+      "chapter": 12,
+      "exercise": "12.4",
+      "name": "12_4_Decoding_Strategies.ipynb",
+      "path": "Notebooks/Chap12/12_4_Decoding_Strategies.ipynb",
+      "sha": "46eb9f40738b362b7825dd1a1eaf3aaf48071aa1",
+      "size": 27361,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap12/12_4_Decoding_Strategies.ipynb"
+    },
+    {
+      "chapter": 13,
+      "exercise": "13.1",
+      "name": "13_1_Graph_Representation.ipynb",
+      "path": "Notebooks/Chap13/13_1_Graph_Representation.ipynb",
+      "sha": "34a5a690b7351c7cfd02b75cb3c6eb78f052d09c",
+      "size": 4646,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap13/13_1_Graph_Representation.ipynb"
+    },
+    {
+      "chapter": 13,
+      "exercise": "13.2",
+      "name": "13_2_Graph_Classification.ipynb",
+      "path": "Notebooks/Chap13/13_2_Graph_Classification.ipynb",
+      "sha": "890160c97dc4e25655293e01824332ebc01c62ed",
+      "size": 8301,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap13/13_2_Graph_Classification.ipynb"
+    },
+    {
+      "chapter": 13,
+      "exercise": "13.3",
+      "name": "13_3_Neighborhood_Sampling.ipynb",
+      "path": "Notebooks/Chap13/13_3_Neighborhood_Sampling.ipynb",
+      "sha": "650a7c574568e4781cb242c5e462e4f025e401be",
+      "size": 11343,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap13/13_3_Neighborhood_Sampling.ipynb"
+    },
+    {
+      "chapter": 13,
+      "exercise": "13.4",
+      "name": "13_4_Graph_Attention_Networks.ipynb",
+      "path": "Notebooks/Chap13/13_4_Graph_Attention_Networks.ipynb",
+      "sha": "7086248a888542d7d262c3a70702a11b676861a2",
+      "size": 6824,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap13/13_4_Graph_Attention_Networks.ipynb"
+    },
+    {
+      "chapter": 15,
+      "exercise": "15.1",
+      "name": "15_1_GAN_Toy_Example.ipynb",
+      "path": "Notebooks/Chap15/15_1_GAN_Toy_Example.ipynb",
+      "sha": "a9fcc8be3af98c4c6b41a596b5942d7fa17ee846",
+      "size": 13695,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap15/15_1_GAN_Toy_Example.ipynb"
+    },
+    {
+      "chapter": 15,
+      "exercise": "15.2",
+      "name": "15_2_Wasserstein_Distance.ipynb",
+      "path": "Notebooks/Chap15/15_2_Wasserstein_Distance.ipynb",
+      "sha": "25cac8ae1f86c200933a9a1b9eb98e49ec2db7bd",
+      "size": 9913,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap15/15_2_Wasserstein_Distance.ipynb"
+    },
+    {
+      "chapter": 16,
+      "exercise": "16.1",
+      "name": "16_1_1D_Normalizing_Flows.ipynb",
+      "path": "Notebooks/Chap16/16_1_1D_Normalizing_Flows.ipynb",
+      "sha": "cbe5ff537fa41760ad1164cf69b831a6ec754de6",
+      "size": 6256,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap16/16_1_1D_Normalizing_Flows.ipynb"
+    },
+    {
+      "chapter": 16,
+      "exercise": "16.2",
+      "name": "16_2_Autoregressive_Flows.ipynb",
+      "path": "Notebooks/Chap16/16_2_Autoregressive_Flows.ipynb",
+      "sha": "458345530de597e3b71fdf082284afe5222bc141",
+      "size": 9951,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap16/16_2_Autoregressive_Flows.ipynb"
+    },
+    {
+      "chapter": 16,
+      "exercise": "16.3",
+      "name": "16_3_Contraction_Mappings.ipynb",
+      "path": "Notebooks/Chap16/16_3_Contraction_Mappings.ipynb",
+      "sha": "b97f7550c23cc6c11efd42ec097ae3e2d2d9f688",
+      "size": 7966,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap16/16_3_Contraction_Mappings.ipynb"
+    },
+    {
+      "chapter": 17,
+      "exercise": "17.1",
+      "name": "17_1_Latent_Variable_Models.ipynb",
+      "path": "Notebooks/Chap17/17_1_Latent_Variable_Models.ipynb",
+      "sha": "17303503bcd4e7bd0dd6d32d1d963693941b3999",
+      "size": 15299,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap17/17_1_Latent_Variable_Models.ipynb"
+    },
+    {
+      "chapter": 17,
+      "exercise": "17.2",
+      "name": "17_2_Reparameterization_Trick.ipynb",
+      "path": "Notebooks/Chap17/17_2_Reparameterization_Trick.ipynb",
+      "sha": "2fa0429ce90ed964c8ed1e1e50d6149edcaafd32",
+      "size": 14883,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap17/17_2_Reparameterization_Trick.ipynb"
+    },
+    {
+      "chapter": 17,
+      "exercise": "17.3",
+      "name": "17_3_Importance_Sampling.ipynb",
+      "path": "Notebooks/Chap17/17_3_Importance_Sampling.ipynb",
+      "sha": "402460f36ee03160452751a08ea547ab5e369e2d",
+      "size": 16545,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap17/17_3_Importance_Sampling.ipynb"
+    },
+    {
+      "chapter": 18,
+      "exercise": "18.1",
+      "name": "18_1_Diffusion_Encoder.ipynb",
+      "path": "Notebooks/Chap18/18_1_Diffusion_Encoder.ipynb",
+      "sha": "7b8028a91018ce4b401a48603b783dcff528837d",
+      "size": 18187,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap18/18_1_Diffusion_Encoder.ipynb"
+    },
+    {
+      "chapter": 18,
+      "exercise": "18.2",
+      "name": "18_2_1D_Diffusion_Model.ipynb",
+      "path": "Notebooks/Chap18/18_2_1D_Diffusion_Model.ipynb",
+      "sha": "c59e6524b5dc527c7e8f360fd6dd5bdd825c2477",
+      "size": 16309,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap18/18_2_1D_Diffusion_Model.ipynb"
+    },
+    {
+      "chapter": 18,
+      "exercise": "18.3",
+      "name": "18_3_Reparameterized_Model.ipynb",
+      "path": "Notebooks/Chap18/18_3_Reparameterized_Model.ipynb",
+      "sha": "93f7c2f4a2a774586848759244967eeb19b67f8c",
+      "size": 15395,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap18/18_3_Reparameterized_Model.ipynb"
+    },
+    {
+      "chapter": 18,
+      "exercise": "18.4",
+      "name": "18_4_Families_of_Diffusion_Models.ipynb",
+      "path": "Notebooks/Chap18/18_4_Families_of_Diffusion_Models.ipynb",
+      "sha": "335e848f660063b9cece756a99976dfb401404c1",
+      "size": 20881,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap18/18_4_Families_of_Diffusion_Models.ipynb"
+    },
+    {
+      "chapter": 19,
+      "exercise": "19.1",
+      "name": "19_1_Markov_Decision_Processes.ipynb",
+      "path": "Notebooks/Chap19/19_1_Markov_Decision_Processes.ipynb",
+      "sha": "76b285417901b5cb5804c82465a10e973348af7e",
+      "size": 38397,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap19/19_1_Markov_Decision_Processes.ipynb"
+    },
+    {
+      "chapter": 19,
+      "exercise": "19.2",
+      "name": "19_2_Dynamic_Programming.ipynb",
+      "path": "Notebooks/Chap19/19_2_Dynamic_Programming.ipynb",
+      "sha": "f326f6bf74f87d365055d36c118b80998a45fdf4",
+      "size": 32203,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap19/19_2_Dynamic_Programming.ipynb"
+    },
+    {
+      "chapter": 19,
+      "exercise": "19.3",
+      "name": "19_3_Monte_Carlo_Methods.ipynb",
+      "path": "Notebooks/Chap19/19_3_Monte_Carlo_Methods.ipynb",
+      "sha": "996700be10b844d1787e4e94e9281a5b9218d597",
+      "size": 42574,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap19/19_3_Monte_Carlo_Methods.ipynb"
+    },
+    {
+      "chapter": 19,
+      "exercise": "19.4",
+      "name": "19_4_Temporal_Difference_Methods.ipynb",
+      "path": "Notebooks/Chap19/19_4_Temporal_Difference_Methods.ipynb",
+      "sha": "e8f5e0dd7ff8e16bca43360522ddaa0c1a1c33ff",
+      "size": 43336,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap19/19_4_Temporal_Difference_Methods.ipynb"
+    },
+    {
+      "chapter": 19,
+      "exercise": "19.5",
+      "name": "19_5_Control_Variates.ipynb",
+      "path": "Notebooks/Chap19/19_5_Control_Variates.ipynb",
+      "sha": "1ce945a97d0a79dd8e4fe7bdb8889ad6fcb6a012",
+      "size": 5392,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap19/19_5_Control_Variates.ipynb"
+    },
+    {
+      "chapter": 20,
+      "exercise": "20.1",
+      "name": "20_1_Random_Data.ipynb",
+      "path": "Notebooks/Chap20/20_1_Random_Data.ipynb",
+      "sha": "0689209f0d94de6a201b8910eaf10e4584bab2db",
+      "size": 10197,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap20/20_1_Random_Data.ipynb"
+    },
+    {
+      "chapter": 20,
+      "exercise": "20.2",
+      "name": "20_2_Full_Batch_Gradient_Descent_GPU.ipynb",
+      "path": "Notebooks/Chap20/20_2_Full_Batch_Gradient_Descent_GPU.ipynb",
+      "sha": "b9bb56d6e4aa9f0daba88ef25a0e07ad75564d5e",
+      "size": 10422,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap20/20_2_Full_Batch_Gradient_Descent_GPU.ipynb"
+    },
+    {
+      "chapter": 20,
+      "exercise": "20.2",
+      "name": "20_2_Full_Batch_Gradient_Descent.ipynb",
+      "path": "Notebooks/Chap20/20_2_Full_Batch_Gradient_Descent.ipynb",
+      "sha": "672d827d4e7970cd66899ff9db96a397dfbab5b4",
+      "size": 9826,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap20/20_2_Full_Batch_Gradient_Descent.ipynb"
+    },
+    {
+      "chapter": 20,
+      "exercise": "20.3",
+      "name": "20_3_Lottery_Tickets.ipynb",
+      "path": "Notebooks/Chap20/20_3_Lottery_Tickets.ipynb",
+      "sha": "0134a5347eca5022f70511f932fed873f61e8d64",
+      "size": 14859,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap20/20_3_Lottery_Tickets.ipynb"
+    },
+    {
+      "chapter": 20,
+      "exercise": "20.4",
+      "name": "20_4_Adversarial_Attacks.ipynb",
+      "path": "Notebooks/Chap20/20_4_Adversarial_Attacks.ipynb",
+      "sha": "efd73a02cfd3a65534cfb436ea120db9dc8e1106",
+      "size": 13815,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap20/20_4_Adversarial_Attacks.ipynb"
+    },
+    {
+      "chapter": 21,
+      "exercise": "21.1",
+      "name": "21_1_Bias_Mitigation.ipynb",
+      "path": "Notebooks/Chap21/21_1_Bias_Mitigation.ipynb",
+      "sha": "63b2c9230ae472724365fd99526fa1726ab95f13",
+      "size": 19083,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap21/21_1_Bias_Mitigation.ipynb"
+    },
+    {
+      "chapter": 21,
+      "exercise": "21.2",
+      "name": "21_2_Explainability.ipynb",
+      "path": "Notebooks/Chap21/21_2_Explainability.ipynb",
+      "sha": "fcdd58003319265876eb2b857619e026fea1b705",
+      "size": 19171,
+      "url": "https://github.com/udlbook/udlbook/blob/da1334fb8e92700e1f2ff3216387da2e68af9d25/Notebooks/Chap21/21_2_Explainability.ipynb"
+    }
+  ]
+}
